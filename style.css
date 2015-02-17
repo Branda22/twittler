@@ -1,31 +1,36 @@
 body {
-	background: #f2f2f2;
+	background: #00b6ed;
 	font-family: helvetica;
 }
 
 header {
 	height: 100px;
-	-webkit-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-	-moz-box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
-	box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.75);
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
 	margin: 0 0 10px 0;
 	background: white;
 }
 
-
 #title {
+	color: #00b6ed;
 	font-size: 72px;
 	text-align: center;
+	font-weight: bold;
+	padding-top: 15px;
 }
 .tweet {
-	margin: 0 auto;
+	-webkit-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.75);
+	background: white;
+	margin: 10px auto;
 	width: 50%;
 	padding: 20px;
-	border-bottom: 1px dotted gray;
 }
 
 .message {
-	font-size: 20px;
+	font-size: 22px;
 	margin: 10px 0 10px 0;
 	text-align: center;
 }
@@ -40,6 +45,18 @@ header {
 	text-align: right;
 }
 .timeline {
-	color: blue;
-	border-bottom: .5px dotted gray;
+	color: black;
+	display: none;
+}
+
+.timeline-message {
+	font-size: 14px;
+	color: gray;
+	margin: 5px 0;	
+}
+
+.timeline-time {
+	font-size: 8px;
+	border-bottom: 1px dotted gray;
+	color: #00b6ed;
 }
