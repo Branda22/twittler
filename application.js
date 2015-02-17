@@ -2,23 +2,34 @@ $(document).ready(function(){
   var $section = $('body').find('section');
   $section.html('');
 
-  function getTweets(){
-    var index = streams.home.length - 1;
-    while(index >= 0){
+  function buildTweet(index){
       var tweet = streams.home[index];
       var $tweet = $('<div></div>').addClass('tweet');
-      $tweet.html("<p><span>@" + tweet.user + "</span>: " + tweet.message + ' ' + ' | created at ' + tweet.created_at + "</p>");
+      var $user = $('<a href="#">@' + tweet.user +'</a>').addClass('user');
+      var $message = $('<p>' + tweet.message + '</p>').addClass('message');
+      var $time = $('<p>'+ tweet.created_at +'</p>').addClass('time');
+      $tweet.append($user);
+      $tweet.append($message);
+      $tweet.append($time);
+
       $tweet.appendTo($section);
-      index -= 1;
-    }
+
+  }
+  
+  function getTweet(){
+    var index = streams.home.length - 1;
+    buildTweet(index);
   }
   //get initial tweets to load page;
-  getTweets();
+  getTweet();
 
-  //auto load tweets every 5000ms
+  //auto load tweets every random amount of time.
   setInterval(function(){
-    getTweets();
-  }, 5000);
+    getTweet();
+  }, 3000);
 
+  $('.user').on('click', function(){
+        
+  });
   $("html").load()    
 });
