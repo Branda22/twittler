@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <script src="jquery.js"></script>
-    <script src="data_generator.js"></script>
-    <script src="application.js"></script>
-  </head>
-  <body>
-    <script>
       function loadTweets(tweet){
         setInterval(function(){
 
@@ -27,7 +18,3 @@
         }
 
       });
-
-    </script>
-  </body>
-</html>
